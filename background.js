@@ -1,9 +1,6 @@
 
-browser.action.onClicked.addListener(() => {
-  console.log('clicked');
-  browser.tabs.create({
-    url: 'https://developer.mozilla.org'
-  })
+browser.tabs.onActivated.addListener((activeInfo) => {
+  console.log(activeInfo.tabId, 'tabId');
 })
 
 browser.contextMenus.create({
