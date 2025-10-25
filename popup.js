@@ -4,6 +4,7 @@ const form = document.getElementById("valuesForm");
 
 form.addEventListener('submit', () => {
   const delay = document.getElementById("delay").value;
+  const length = document.getElementById("length").value;
 
   browser.tabs.query({
     active: true, 
@@ -15,7 +16,8 @@ form.addEventListener('submit', () => {
         {
           from: 'popup',
           action: 'start',
-          delay
+          delay,
+          length
         },
         () => console.log('callback')
       ) 

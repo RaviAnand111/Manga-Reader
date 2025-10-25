@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="popup.css">
   </head>
   <body>
     <h1>Hello Manga Reader</h1> 
     <form id="valuesForm">
       <div>
-      <label>Delay (in seconds)</label>
-      <input type="number" name="delay" id="delay"></input>
+        <label>Length</label>
+        <input type="number" name="length" id="length" placeholder="100px">100</input>
+        <span>pixel</span>
       </div>
+      <div>
+        <label>Delay (in seconds)</label>
+        <input type="number" name="delay" id="delay">1</input>
+        <span>seconds</span>
+      </div>
+      
       <button type="submit">Submit</button>
     </form>
     <script src="popup.js"></script>
