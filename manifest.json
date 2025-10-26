@@ -1,21 +1,16 @@
 {
   "manifest_version": 3,
-  "name": "Manga Reader",
+  "name": "Scroll Ease",
   "version": "1.0",
   "action": {
-    "default_popup": "popup.html",
+    "default_popup": "popup/popup.html",
     "default_icon": {
-     "16": "images.png" 
+     "32": "book-icon-32.png",
+     "64": "book-icon-64.png" 
     }
   },
-  "permissions": ["activeTab", "contextMenus", "scripting"],
+  "permissions": ["activeTab", "contextMenus", "scripting", "storage"],
   "background": {
     "scripts": ["background.js"]
-  },
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["page-eater.js"]
-    }
-  ]
+  }
 }
