@@ -1,6 +1,5 @@
 
 browser.tabs.onActivated.addListener((activeInfo) => {
-  console.log(activeInfo.tabId, 'tabId');
 })
 
 browser.contextMenus.create({
@@ -9,7 +8,6 @@ browser.contextMenus.create({
 });
 
 browser.contextMenus.onClicked.addListener((info, tab) => {
-  console.log('listener');
   if (info.menuItemId === "eat-page") {
     browser.scripting.executeScript({
       target: {
