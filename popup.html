@@ -2,22 +2,29 @@
 <html>
   <head>
     <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="theme.css">
   </head>
   <body>
-    <h1>Hello Manga Reader</h1> 
+    <div>
+      <h1>ReadEase</h1>
+    </div>
     <form id="valuesForm">
-      <div>
-        <label>Length</label>
-        <input type="number" name="length" id="length" placeholder="100px">100</input>
-        <span>pixel</span>
+      <div class="field">
+        <label for="length" class="label">Scroll Distance</label>
+        <span class="inputContainer">
+        <input class="input" type="number" name="length" id="length"></input>
+        <span class="unit pixel">pixel</span>
+        </span>
       </div>
-      <div>
-        <label>Delay (in seconds)</label>
-        <input type="number" name="delay" id="delay">1</input>
-        <span>seconds</span>
+      <div class="field">
+        <label for="delay" class="label">Scroll Interval</label>
+        <span class="inputContainer">
+        <input class="input" type="number" name="delay" id="delay"></input>
+        <span class="unit seconds">seconds</span>
+        </span>
       </div>
       
-      <button type="submit">Submit</button>
+      <button class="button" type="submit">Submit</button>
     </form>
     <script src="popup.js"></script>
   </body>

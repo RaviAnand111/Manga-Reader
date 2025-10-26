@@ -1,5 +1,3 @@
-console.log('popup js');
-
 const form = document.getElementById("valuesForm");
 
 form.addEventListener('submit', () => {

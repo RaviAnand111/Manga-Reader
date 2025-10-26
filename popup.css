@@ -1,3 +1,7 @@
+h1 {
+  font-size: 18px;
+}
+
 .input[type=number]::-webkit-outer-spin-button,
 .input[type=number]::-webkit-inner-spit-button {
   -webkit-appearance: none;
@@ -7,3 +11,44 @@
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+#valuesForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  text-align: center;
+  align-items: center;
+}
+
+.field {
+  .label {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+  align-items: center;
+}
+
+.unit {
+ color: grey;
+}
+
+.pixel {
+  margin-left: -2.6rem;
+}
+
+.seconds {
+ margin-left: -4rem;
+}
+
