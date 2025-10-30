@@ -11,7 +11,7 @@
   "action": {
     "default_popup": "popup/popup.html"
   },
-  "permissions": ["activeTab", "contextMenus", "scripting", "storage"],
+  "permissions": ["activeTab", "scripting", "storage"],
   "background": {
     "scripts": ["background.js"]
   },

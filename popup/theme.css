@@ -1,6 +1,7 @@
 :root {
+  color-scheme: light dark;
   /* Light mode colors */
-  --background: #f9fafb;
+  --light-background: #f9fafb;
   --foreground: #09090b;
 
   --card: #ffffff;
@@ -14,12 +15,16 @@
   --radius-sm: 0.375rem;
   --radius-md: 0.5rem;
   --radius-lg: 0.75rem;
+
+  /* Dark mode colors */
+  --dark-background: #000000;
+  --dark-foreground: #18191B;
 }
 
 body {
   margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-  background-color: var(--background);
+  background-color: light-dark(var(--light-background), var(--dark-background));
   color: var(--foreground);
   padding: 16px;
 }
@@ -38,8 +43,8 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--foreground);
-  color: white;
+  background-color: light-dark(var(--foreground), var(--dark-foreground));
+  color: light-dark(white, #AFB3B7);
   padding: 0.5rem 1rem;
   font-size: 14px;
   font-weight: 500;
@@ -61,8 +66,10 @@ body {
   width: 100%;
   padding: 0.5rem 0.75rem;
   border-radius: var(--radius-md);
-  border: 1px solid var(--card-border);
-  background-color: white;
+/*  border: 0.5px solid light-dark(var(--card-border), var(#AFB3B7)); */
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(99,102,241,0.2);
+  background-color: light-dark(var(--foreground), var(--dark-foreground));
   font-size: 14px;
   color: var(--foreground);
   transition: border-color 0.15s ease;

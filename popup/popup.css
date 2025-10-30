@@ -1,5 +1,6 @@
 h1 {
   font-size: 18px;
+  color: light-dark(black, white);
 }
 
 .input[type=number]::-webkit-outer-spin-button,
@@ -24,6 +25,7 @@ input[type=number] {
   gap: 1rem;
   text-align: center;
   align-items: center;
+  color: light-dark(black, white);
 }
 
 .field {
@@ -41,7 +43,7 @@ input[type=number] {
 }
 
 .unit {
- color: grey;
+ color: light-dark(grey, #AFB3B7);
 }
 
 .pixel {
